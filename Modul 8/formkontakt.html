@@ -1,0 +1,87 @@
+<html>
+<head>
+
+<style>
+form {
+    /* Centrera formulär */
+    margin: 0 auto;
+    width: 400px;
+    /* Linje runt formuläret  */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+form div + div {
+    /* Läger till mellanrum mellan DIV */  
+    margin-top: 1em;
+}
+label {
+    /* Se till så alla labels har samma storlek och rätt position */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input, textarea {
+    /* Ser till att alla text har samma typsnitt */
+    font: 1em sans-serif;
+
+    /* Samma storlek för alla textfält */
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* Liknande ram */
+    border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+    /* Markerar aktivt fält */
+    border-color: #000;
+}
+textarea {
+    /* Positionera textarea mot de andra fälten */
+    vertical-align: top;
+
+    /* Ge plats för att skriva text */
+    height: 5em;
+
+    /* Ger möjlighet till användare att ändra storlek vertikalt för textarea, fungerar inte på alla webbläsare */
+    resize: vertical;
+}
+.button {
+    /* Positionera knapp till samma position som textfält */
+    padding-left: 90px; /* samma storlek som label element */
+}
+button {
+    /* Extra marginal som motsvara mellanrummet mellan labels och textfält  */
+    margin-left: .5em;
+}
+
+
+
+</style>
+
+</head>
+
+
+<form action="skickameddelande1.php" method="post">
+  <div>
+<label for="name">Namn:</label>
+<input type="text" id="namn" name="anv_Namn" required=”required” placeholder="För- och efternamn" />
+  </div>
+  <div>
+     <label for="mail">E-mail:</label>
+     <input type="email" id="mail" name="anv_Mail" />
+  </div>
+  <div>
+     <label for="med">Meddelande:</label>
+     <textarea id="med" name="anv_Meddelande" placeholder="Här kan du skriva ditt meddelande ..."></textarea>
+
+  </div>
+    <div class="button">
+        <button type="submit">Skicka</button>
+    </div>
+
+</form>
+</html>
