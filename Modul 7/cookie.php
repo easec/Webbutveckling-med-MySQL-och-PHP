@@ -9,10 +9,7 @@
 
 <body>
 
-<?php
-echo 'Hejsan '.($_COOKIE['for_namn']!='' ? $_COOKIE['for_namn'] . "!" : 'Gäst');
 
-?>
 </body>
 
 </html>
