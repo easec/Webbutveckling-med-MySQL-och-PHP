@@ -1,13 +1,12 @@
 <?php
 /**
- * This is a summary.
- * This is a description
+ * Klass CDice.php
+ * Används av dice.php
  */
 
 
 class CDice
 {
-
 
     public $rolls = array();
 
@@ -20,7 +19,6 @@ class CDice
         }
     }
 
- 
     public function GetTotal() {
         return array_sum($this->rolls);
     }
