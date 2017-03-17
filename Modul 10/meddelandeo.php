@@ -1,12 +1,12 @@
 <?php
 // Ansluta till databas
-$servername = "localhost";
-$username = "root";
-$password = "Pa$$w0rd";
-$dbname = "kontakt_db";
+
 // Kontrollera anslutningen och exekvera SQL
+
+
+
 try { 
-    	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    	$conn = new PDO('mysql:host=localhost;dbname=kontakt_db;charset=utf8', 'root', 'Pa$$w0rd');
     	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	$sql = 'SELECT * FROM meddelande_tbl';
