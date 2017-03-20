@@ -4,7 +4,7 @@ require_once 'anslutning.php';
 try { 
 	// Ansluta till databas
 	$conn = new PDO($dsn, $login, $password, $options);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  
 	// Exekvera SQL
 	$sql = 'SELECT * FROM meddelande_tbl';
