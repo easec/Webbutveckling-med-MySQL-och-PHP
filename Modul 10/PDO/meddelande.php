@@ -4,9 +4,9 @@
     try { 
     	       $conn = new PDO('mysql:host=localhost;dbname=kontakt_db;charset=utf8', 'root', 'Pa$$w0rd');
     	       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	           $sql = 'SELECT * FROM meddelande_tbl';
-	           $q = $conn->query($sql);
-	           $q->setFetchMode(PDO::FETCH_ASSOC);
+	       $sql = 'SELECT * FROM meddelande_tbl';
+	       $q = $conn->query($sql);
+	       $q->setFetchMode(PDO::FETCH_ASSOC);
     }
     catch(PDOException $e)
     	 {
