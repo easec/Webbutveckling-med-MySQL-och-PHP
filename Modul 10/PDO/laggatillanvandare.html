@@ -1,0 +1,147 @@
+<html>
+<head>
+
+<style>
+form {
+    /* Centrera formulär */
+    margin: 0 auto;
+    width: 840px;
+    /* Linje runt formuläret  */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+form div + div {
+    /* Läger till mellanrum mellan DIV */  
+    margin-top: 1em;
+}
+label {
+    /* Se till så alla labels har samma storlek och rätt position */
+    display: inline-block;
+    width: 90px;
+    font: 1em sans-serif;
+    text-align: right;
+}
+input {
+    /* Ser till att alla text har samma typsnitt */
+    font: 1em sans-serif;
+    /* Samma storlek för alla textfält */
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* Liknande ram */
+    border: 1px solid #999;
+}
+input:focus, textarea:focus {
+    /* Markerar aktivt fält */
+    border-color: #000;
+}
+.postnummer {
+    /* mindre inputfält  */
+width: 50px;
+}
+tr.extra > td {    
+    /* extramellanrum mellan rader i tabell */
+padding-bottom: 1em;
+}
+.button {
+    /* Positionera knapp till samma position som textfält */
+    padding-left: 90px; /* samma storlek som label element */
+}
+button {
+    /* Extra marginal som motsvara mellanrummet mellan labels och textfält  */
+    margin-left: .5em;
+}
+</style>
+
+</head>
+<center>
+<h2>Användareregistrering</h2>
+</center>
+<br />
+<form action="laggatillanvpdo.php" method="post">
+  <div>
+	<label for="Förnamn">Förnamn:</label>
+	<input type="text" id="Förnamn" name="fnamn" required=”required” placeholder="Krävs" />
+  </div>
+
+  <div>
+<label for="Efternamn">Efternamn:</label>
+<input type="text" id="Efternamn" name="enamn" required=”required” placeholder="Krävs" />
+  </div>
+  <div>
+     <label for="mail">E-mail:</label>
+     <input type="email" id="mail" name="epost" required=”required” placeholder="Krävs" />
+  </div>
+<div>
+	<table>
+		<tr class=extra>
+			<td>
+				<div>
+					<label for="Adress">Adress:</label>
+					<input type="text" id="Adress" name="adress1" required="required" placeholder="Krävs" />
+				</div>
+			</td>
+			<td>
+				<div>
+					<label for="Adress2">Adress 2:</label>
+					<input type="text" id="Adress2" name="adress2" />
+				</div>
+			</td>
+
+		</tr>
+		<tr>
+			<td>
+				<div>
+					<label for="Postnummer">Postnummer:</label>
+					<input type="text" class="postnummer" id="Postnummer" name="pnummer" maxlength="5" required=”required” placeholder="Krävs" />
+				</div>
+			</td>
+
+			<td>
+				<div>
+					<label for="Adress3">Adress 3:</label>
+					<input type="text" id="Adress3" name="adress3" />
+ 				</div>
+			</td>
+		</tr>
+
+
+</table>
+</div>
+<div>
+<label for="Postort">Postort:</label>
+<input type="text" id="Postort" name="postort" maxlength="40" required=”required” placeholder="Krävs" />
+
+</div>
+
+<div>
+<label for="Ftelefon">Telefon:</label>
+<input type="text" id="Ftelefon" name="ftelefon" />
+
+</div>
+<div>
+<label for="Mtelefn">Mobil:</label>
+<input type="text" id="Mtelefon" name="mtelefon" />
+
+</div>
+
+<br />
+<table>
+	<tr>
+		<td>
+	
+    			<div class="button">
+        			<button type="submit">Skicka</button>
+    			</div>
+		</td>
+		<td>
+			<div class="button">
+        			<button type="reset">Rensa</button>
+    			</div>
+		</td>
+	</tr>
+</table>
+
+</form>
+</html>
